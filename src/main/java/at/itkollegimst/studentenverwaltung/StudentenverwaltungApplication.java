@@ -1,13 +1,20 @@
 package at.itkollegimst.studentenverwaltung;
 
+import at.itkollegimst.studentenverwaltung.repositories.StudentJPARepo;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StudentenverwaltungApplication {
+public class StudentenverwaltungApplication implements ApplicationRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(StudentenverwaltungApplication.class, args);
 	}
 
+	@Override
+	public void run(ApplicationArguments args) throws Exception {
+
+	}
 }
