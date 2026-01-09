@@ -26,4 +26,9 @@ public class student {
 
     @Size(min=4, max = 6)
     private String plz;
+
+    public student(String name, String plz) {
+        this.name = name;
+        this.plz = plz;
+    }
 }
