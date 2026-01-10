@@ -25,6 +25,7 @@ public class StudentenverwaltungApplication implements ApplicationRunner {
 		this.studentJPARepo.save(new student("dullu", "6845"));
 		this.studentJPARepo.save(new student("nef", "6845"));
 		this.studentJPARepo.save(new student("def", "6845"));
+		this.studentJPARepo.save(new student("deftest", "6845"));
 
 	}
 }
