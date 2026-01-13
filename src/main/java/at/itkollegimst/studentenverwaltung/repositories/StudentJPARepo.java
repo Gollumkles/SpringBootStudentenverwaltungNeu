@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface StudentJPARepo extends JpaRepository<student,Long> {
-
+    student findAllByPlz(String plz);
 }
