@@ -8,12 +8,13 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class DbZugriffStudentenImplmentation implements DbZugriffStudenten  {
+public class DbZugriffStudentenJPA implements DbZugriffStudenten  {
 
-    @Autowired
     private  StudentJPARepo studentJPARepo;
 
-
+    public DbZugriffStudentenJPA(StudentJPARepo studentJPARepo) {
+        this.studentJPARepo = studentJPARepo;
+    }
 
     @Override
     public student StudentSpeicher(student Student) {
