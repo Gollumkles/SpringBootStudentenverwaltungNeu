@@ -16,7 +16,7 @@ import lombok.Setter;
 @Getter
 @Setter
 
-public class student {
+public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
@@ -27,7 +27,7 @@ public class student {
     @Size(min=4, max = 6)
     private String plz;
 
-    public student(String name, String plz) {
+    public Student(String name, String plz) {
         this.name = name;
         this.plz = plz;
     }

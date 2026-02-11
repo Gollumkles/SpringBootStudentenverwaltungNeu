@@ -1,8 +1,7 @@
 package at.itkollegimst.studentenverwaltung.repositories;
 
-import at.itkollegimst.studentenverwaltung.domain.student;
+import at.itkollegimst.studentenverwaltung.domain.Student;
 import at.itkollegimst.studentenverwaltung.exceptions.StudentNichtGefunden;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -18,24 +17,24 @@ public class DbZugriffStudentenJPA implements DbZugriffStudenten  {
     }
 
     @Override
-    public student StudentSpeicher(student Student) {
+    public Student StudentSpeicher(Student Student) {
         return this.studentJPARepo.save(Student);
     }
 
     @Override
-    public List<student> alleStudenten() {
+    public List<Student> alleStudenten() {
 
         return this.studentJPARepo.findAll();
     }
 
     @Override
-    public student alleStudentenAusDemOrt(String plz) {
+    public Student alleStudentenAusDemOrt(String plz) {
         return this.studentJPARepo.findAllByPlz(plz);
     }
 
     @Override
-    public student studentMitId(Long id) throws StudentNichtGefunden {
-        Optional<student> optStudent = this.studentJPARepo.findById(id);
+    public Student studentMitId(Long id) throws StudentNichtGefunden {
+        Optional<Student> optStudent = this.studentJPARepo.findById(id);
         if(optStudent.isPresent()) {
             return optStudent.get();
         }else  {
