@@ -11,9 +11,9 @@ public interface StudentenService {
 
     Student studentEinfuegen(Student Student);
 
-    Student studentMitId(Long id) throws StudentNichtGefunden;
-
     List<Student> alleStudentenMitPlz(String plz);
 
     void studentLoeschenMitId(Long id);
+
+    List<Student> alleStudentenMitid(Long id);
 }
